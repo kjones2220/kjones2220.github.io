@@ -1,0 +1,172 @@
+/* -------------------------------------------------- */
+/* Universal */
+/* -------------------------------------------------- */
+
+body {
+  margin: 0;
+  font-size: 18px;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* NOTE the comma's here mean that h1, h2, ..., p will ALL share these same styles */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 800;
+}
+
+h2.heading {
+  margin-bottom: 40px;
+}
+
+/* -------------------------------------------------- */
+/* Sections */
+/* -------------------------------------------------- */
+
+section .container {
+  width: 1200px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+section.black {
+  background-color: black;
+  color: white;
+}
+
+section.pink {
+  background-color: #ff267c;
+  color: white;
+}
+
+section.padded {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* -------------------------------------------------- */
+/* Rows and Columns */
+/* -------------------------------------------------- */
+
+.row {
+  display: flex;
+}
+
+.column-small {
+  width: 34%;
+}
+.column-med {
+  width: 50%;
+}
+.column-large {
+  width: 66%;
+  padding-left: 40px;
+}
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+ * We give each column padding on their left and right so they have gaps between
+ * each other. This is just a stylistic decision on my part :) As is this whole
+ * css file really.
+ */
+.column {
+  padding: 0px 15px;
+}
+
+/*
+ * This selector selects element's with class "column" and are the first element
+ * within a wrapping element
+ *
+ * We set the left margin to be -15px to offset the padding caused by the above
+ * style on all "column" elements. By having -15px left on the first column and
+ * -15px right on the last column in each row, our row's left and right spacing
+ * will match the rest of the website.
+ *
+ * Unsure what that means? Try removing the following two css element selectors
+ * (.column:first-child and .column:last-child) and the styles defined within
+ * them to see how the website changes.
+ */
+.column:first-child {
+  margin-left: -15px;
+}
+/*
+ * Styles for element's with class "column" and are the last child within a
+ * wrapping element
+ */
+.column:last-child {
+  margin-right: -15px;
+}
+
+/* -------------------------------------------------- */
+/* Buttons */
+/* -------------------------------------------------- */
+a.button {
+  background-color: #ff267c;
+  font-weight: bold;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: ease all .3s; /* Animates the change between nonhover and hover */
+}
+a.button:hover {
+  /* Use this website to generate box-shadows: https://www.cssmatic.com/box-shadow */
+  -webkit-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.5);
+}
+
+/* -------------------------------------------------- */
+/* Hero */
+/* -------------------------------------------------- */
+
+section.hero {
+  width: 100%;
+  height: 100vh; /* 100vh = "100% of view height," have this section expand the max height of the viewer's screen */
+  display: flex;
+  align-items: center;
+}
+section.hero h1 {
+  font-size: 80px;
+  max-width: 66%;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+section.hero .highlight {
+  color: #ff267c;
+}
+
+/* -------------------------------------------------- */
+/* Navbar */
+/* -------------------------------------------------- */
+
+section.navbar {
+  padding: 20px 0px;
+  background-color: #fff;
+  position: fixed; /* Makes the navbar sticky to the top of the page */
+  width: 100%;
+}
+section.navbar .row {
+  display: flex;
+  justify-content: space-between; /* Push the two children of the navbar to left and right */
+}
+section.navbar a {
+  font-weight: bold;
+  color: black;
+  text-decoration: none; /* Remove the underline on the link */
+}
+section.navbar .links a {
+  margin-left: 20px;
+  opacity: .4;
+}
+section.navbar .links a:hover {
+  opacity: 1;
+}
