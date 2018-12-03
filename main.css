@@ -38,8 +38,8 @@ section.black {
   color: white;
 }
 
-section.pink {
-  background-color: #ff267c;
+section.red {
+  background-color: #EE0025;
   color: white;
 }
 
@@ -106,25 +106,6 @@ section.padded {
 }
 
 /* -------------------------------------------------- */
-/* Buttons */
-/* -------------------------------------------------- */
-a.button {
-  background-color: #ff267c;
-  font-weight: bold;
-  color: white;
-  padding: 12px 24px;
-  text-decoration: none;
-  border-radius: 50px;
-  transition: ease all .3s; /* Animates the change between nonhover and hover */
-}
-a.button:hover {
-  /* Use this website to generate box-shadows: https://www.cssmatic.com/box-shadow */
-  -webkit-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.5);
-  -moz-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.5);
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.5);
-}
-
-/* -------------------------------------------------- */
 /* Hero */
 /* -------------------------------------------------- */
 
@@ -141,7 +122,7 @@ section.hero h1 {
   margin-bottom: 20px;
 }
 section.hero .highlight {
-  color: #ff267c;
+  color: #EE0025;
 }
 
 /* -------------------------------------------------- */
